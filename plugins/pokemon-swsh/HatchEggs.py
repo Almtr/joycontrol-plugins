@@ -9,8 +9,8 @@ class HatchEggs(JoycontrolPlugin):
     def __init__(self, controller_state, options):
         super().__init__(controller_state, options)
 
-        if len(options) < 2:
-            raise JoycontrolPluginError('Plugin option not set.')
+        if options is None or len(options) < 2:
+            raise JoycontrolPluginError('Plugin option not set. Please use "--plugin-options <egg cycle> <total of eggs>".')
 
         self.egg_cycle = int(options[0])
         self.total_eggs = int(options[1])
