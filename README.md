@@ -1,12 +1,14 @@
 # joycontrol-plugins
 
-Nintendo Switch automation plugin using [joycontrol](https://github.com/mart1nro/joycontrol) and [joycontrol-pluginloader](https://github.com/Almtr/joycontrol-pluginloader)
+[English](./README.md) / [日本語](./README_ja.md)
 
-## Install
+Nintendo Switch automation plugins using [joycontrol](https://github.com/mart1nro/joycontrol) and [joycontrol-pluginloader](https://github.com/Almtr/joycontrol-pluginloader)
+
+## Installation
 
 1. Install joycontrol and joycontrol-pluginloader
 
-    See: [GitHub - Almtr/joycontrol-pluginloader](https://github.com/Almtr/joycontrol-pluginloader/blob/master/README.md)
+    See: [GitHub - Almtr/joycontrol-pluginloader - README.md](https://github.com/Almtr/joycontrol-pluginloader/blob/master/README.md)
 
 1. Download joycontrol-plugins
 
@@ -83,6 +85,10 @@ This plugin can win the "Battle Tower" automatically.
     1. Rent a team for the battle tower (TEAM ID: 0000-0006-15Y4-3R).
     1. Join the single battle with the team you rented.
     1. Run the script.
+
+        ```sh
+        $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/pokemon-swsh/LoopBattleTower.py
+        ```
 
 - References:
     - https://twitter.com/satoon_sugar/status/1208248084653674496 (Japanese)
