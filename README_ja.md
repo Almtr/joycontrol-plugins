@@ -77,7 +77,7 @@
         ```
 
 - 参考:
-    - http://niwaka-syndrome.blog.jp/archives/20509394.html (Japanese)
+    - [【剣盾】トーナメント自動周回](http://niwaka-syndrome.blog.jp/archives/20509394.html)
 
 ### バトルタワー自動周回用プラグイン（LoopBattleTower Plugin）
 
@@ -93,5 +93,5 @@
         ```
 
 - 参考:
-    - https://twitter.com/satoon_sugar/status/1208248084653674496 (Japanese)
-    - https://twitter.com/satoon_sugar/status/1208253657470226432 (Japanese)
+    - [Twitter - sug@r@satoon_sugar: 1,000勝超えたのでメモ...](https://twitter.com/satoon_sugar/status/1208248084653674496)
+    - [Twitter - sug@r@satoon_sugar: 周回開始前に、使用するチームが選ばれるようにしておく。...](https://twitter.com/satoon_sugar/status/1208253657470226432)
