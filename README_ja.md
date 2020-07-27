@@ -34,4 +34,4 @@ $ git clone https://github.com/Almtr/joycontrol-plugins.git
     - 自動タマゴ孵化（HatchEggs）
     - バトルタワー周回（LoopBattleTower）
     - トーナメント周回（LoopTournament）
-    - ポケモンを逃がす（ReleasePokemons）
+    - ポケモン自動逃がし（ReleasePokemons）
