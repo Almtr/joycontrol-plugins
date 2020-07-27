@@ -32,6 +32,6 @@ $ git clone https://github.com/Almtr/joycontrol-plugins.git
     - 簡易マクロ（SimpleMacro）
 - ポケモンソード・シールドプラグイン
     - 自動タマゴ孵化（HatchEggs）
-    - トーナメント周回（LoopBattleTower）
-    - バトルタワー周回（LoopTournament）
+    - バトルタワー周回（LoopBattleTower）
+    - トーナメント周回（LoopTournament）
     - ポケモンを逃がす（ReleasePokemons）
