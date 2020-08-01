@@ -8,3 +8,4 @@ class PairingController(JoycontrolPlugin):
         # Press the A button when the controller is ready for input.
         logger.info('Pairing completed.')
         await self.button_push('a') # exit
+        await self.wait(5.0)
