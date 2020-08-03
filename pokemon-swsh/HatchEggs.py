@@ -190,5 +190,5 @@ class HatchEggs(JoycontrolPlugin):
         hatching_time = self.__calc_hatching_time(self.egg_cycle)
         end_datetime = self.__calc_end_datetime(self.egg_cycle, self.total_eggs)
 
-        logger.info(f'Estimated hatching completion time: {end_datetime}.')
+        logger.info(f'Estimated end time: {end_datetime}.')
         await self.hatch_eggs(self.total_eggs, hatching_time)

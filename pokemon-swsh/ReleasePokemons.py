@@ -94,7 +94,7 @@ class ReleasePokemons(JoycontrolPlugin):
 
         now = datetime.datetime.now()
         end_datetime = now + datetime.timedelta(seconds=release_num * 5 + 16)
-        logger.info(f'Estimated releasing completion time: {end_datetime}.')
+        logger.info(f'Estimated end time: {end_datetime}.')
 
         logger.info('Reset corsor position.')
         for _ in range(12): # Cancel all
