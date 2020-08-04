@@ -46,7 +46,6 @@ class AutoLotoID(JoycontrolPlugin):
                 await self.button_push('down')
                 await self.wait(0.1)
 
-
         await self.button_push('right')
         await self.wait(0.1)
 
@@ -59,12 +58,12 @@ class AutoLotoID(JoycontrolPlugin):
             await self.button_push('up')
             await self.wait(0.1)
 
+            month += 1
+
             if current_day > 28:
                 max_day = calendar.monthrange(next_dt.year, month % 12 + 1)[1]
                 if current_day > max_day:
                     current_day = max_day
-
-            month += 1
 
         await self.button_push('right')
         await self.wait(0.1)
@@ -145,21 +144,21 @@ class AutoLotoID(JoycontrolPlugin):
 
         # Open the "Home > System Settings > System > Date and Time"
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('a')
         await self.wait(0.5)
 
         # Open the "Home > System Settings > System > Date and Time > Date and Time"
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('down')
-        await self.wait(0.05)
+        await self.wait(0.1)
         await self.button_push('a')
         await self.wait(0.3)
 
