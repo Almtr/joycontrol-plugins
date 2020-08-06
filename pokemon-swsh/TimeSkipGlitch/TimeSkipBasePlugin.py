@@ -32,7 +32,7 @@ class TimeSkipBasePlugin(JoycontrolPlugin):
         await self.wait(0.5)
 
         # Open the "Home > System Settings > System > Date and Time > Date and Time"
-        await self.button_push('down', press_time_sec=0.5)
+        await self.button_push('down', press_time_sec=0.7)
         await self.wait(0.1)
         await self.button_push('a')
         await self.wait(0.3)
