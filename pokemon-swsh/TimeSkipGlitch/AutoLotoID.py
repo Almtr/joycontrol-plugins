@@ -1,7 +1,6 @@
 import logging
 import os
 import sys
-from JoycontrolPlugin import JoycontrolPluginError
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from TimeSkipBasePlugin import TimeSkipBasePlugin
@@ -11,6 +10,11 @@ logger = logging.getLogger(__name__)
 class AutoLotoID(TimeSkipBasePlugin):
     async def run(self):
         logger.info('Auto Loto-ID Plugin loaded!')
+
+        '''
+        Reference:
+          https://github.com/watagi/AutoWatt
+        '''
 
         while True:
             # Talk to Rotomi
