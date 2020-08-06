@@ -7,9 +7,9 @@ from TimeSkipBasePlugin import TimeSkipBasePlugin
 
 logger = logging.getLogger(__name__)
 
-class AutoWatt(TimeSkipBasePlugin):
+class GetWatts(TimeSkipBasePlugin):
     async def run(self):
-        logger.info('Auto Watt Plugin loaded!')
+        logger.info('Get Watts Plugin loaded!')
 
         '''
         Reference:
@@ -17,7 +17,7 @@ class AutoWatt(TimeSkipBasePlugin):
         '''
 
         while True:
-            await self.button_push('a') # Select a den
+            await self.button_push('a') # Examine a pokemon's den
             await self.wait(0.3)
 
             # Close the all messages

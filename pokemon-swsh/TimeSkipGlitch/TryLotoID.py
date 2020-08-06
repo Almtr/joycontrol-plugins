@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 class AutoLotoID(TimeSkipBasePlugin):
     async def run(self):
-        logger.info('Auto Loto-ID Plugin loaded!')
+        logger.info('Try Loto-ID Plugin loaded!')
 
         '''
         Reference:
