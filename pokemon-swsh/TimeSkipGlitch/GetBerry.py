@@ -16,7 +16,7 @@ class GetBerry(TimeSkipBasePlugin):
             logger.info(f'{lap} lap')
             lap += 1
 
-            # Talk to clerk
+            # Shake a tree
             await self.button_push('a')
             await self.wait(0.8)
             await self.button_push('a')
