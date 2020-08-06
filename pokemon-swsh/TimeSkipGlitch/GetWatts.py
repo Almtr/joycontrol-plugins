@@ -16,7 +16,11 @@ class GetWatts(TimeSkipBasePlugin):
           https://github.com/watagi/AutoWatt
         '''
 
+        lap = 1
         while True:
+            logger.info(f'{lap} lap: {lap * 2000:,} watts')
+            lap += 1
+
             await self.button_push('a') # Examine a pokemon's den
             await self.wait(0.3)
 

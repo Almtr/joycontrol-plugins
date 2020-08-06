@@ -7,7 +7,7 @@ from TimeSkipBasePlugin import TimeSkipBasePlugin
 
 logger = logging.getLogger(__name__)
 
-class AutoLotoID(TimeSkipBasePlugin):
+class TryLotoID(TimeSkipBasePlugin):
     async def run(self):
         logger.info('Try Loto-ID Plugin loaded!')
 
@@ -16,7 +16,11 @@ class AutoLotoID(TimeSkipBasePlugin):
           https://github.com/watagi/AutoWatt
         '''
 
+        lap = 1
         while True:
+            logger.info(f'{lap} lap')
+            lap += 1
+
             # Talk to Rotomi
             await self.button_push('a')
             await self.wait(0.3)
