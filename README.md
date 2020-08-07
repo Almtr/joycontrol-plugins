@@ -29,6 +29,14 @@ For more information, see the [wiki](https://github.com/Almtr/joycontrol-plugins
     - RepeatA
     - SimpleMacro
 - Pokemon Sword and Shield Plugins
+    - TimeSkipGlitch
+        - BuyBargains
+        - GetBerries
+        - GetFeathers
+        - GetWatts
+        - TryLotoID
+    - AutoRaid
+    - CombineHoneyAndCandy
     - HatchEggs
     - LoopBattleTower
     - LoopTournament
