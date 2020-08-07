@@ -31,7 +31,15 @@ $ git clone https://github.com/Almtr/joycontrol-plugins.git
     - Aボタン連打（RepeatA）
     - 簡易マクロ（SimpleMacro）
 - ポケモンソード・シールドプラグイン
+    - 日付変更バグ（TimeSkipGlitch）
+        - ほりだしもの自動購入（BuyInBargainShop）
+        - きのみ自動回収（GetBerries）
+        - ハネ自動回収（GetFeathers）
+        - ワット自動回収（GetWatts）
+        - 自動IDくじ（TryLotoID）
+    - マックスレイドバトル周回（AutoRaid）
+    - あまいミツとふしぎなアメの合成（CombineHoneyAndCandy）
     - 自動タマゴ孵化（HatchEggs）
     - トーナメント周回（LoopBattleTower）
     - バトルタワー周回（LoopTournament）
-    - ポケモンを逃がす（ReleasePokemons）
+    - ポケモン自動逃がし（ReleasePokemons）
