@@ -7,9 +7,9 @@ from TimeSkipBasePlugin import TimeSkipBasePlugin
 
 logger = logging.getLogger(__name__)
 
-class GetBerry(TimeSkipBasePlugin):
+class GetBerries(TimeSkipBasePlugin):
     async def run(self):
-        logger.info('Get Berry Plugin loaded!')
+        logger.info('Get Berries Plugin loaded!')
 
         lap = 1
         while True:
