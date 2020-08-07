@@ -32,7 +32,7 @@ $ git clone https://github.com/Almtr/joycontrol-plugins.git
     - 簡易マクロ（SimpleMacro）
 - ポケモンソード・シールドプラグイン
     - 日付変更バグ（TimeSkipGlitch）
-        - ほりだしもの自動購入（BuyInBargainShop）
+        - ほりだしもの自動購入（BuyBargains）
         - きのみ自動回収（GetBerries）
         - ハネ自動回収（GetFeathers）
         - ワット自動回収（GetWatts）

@@ -30,7 +30,7 @@ For more information, see the [wiki](https://github.com/Almtr/joycontrol-plugins
     - SimpleMacro
 - Pokemon Sword and Shield Plugins
     - TimeSkipGlitch
-        - BuyInBargainShop
+        - BuyBargains
         - GetBerries
         - GetFeathers
         - GetWatts

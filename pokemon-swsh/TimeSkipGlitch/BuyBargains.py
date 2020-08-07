@@ -7,9 +7,9 @@ from TimeSkipBasePlugin import TimeSkipBasePlugin
 
 logger = logging.getLogger(__name__)
 
-class BuyInBargainShop(TimeSkipBasePlugin):
+class BuyBargains(TimeSkipBasePlugin):
     async def run(self):
-        logger.info('Buy in bargain shop Plugin loaded!')
+        logger.info('Buy Bargains Plugin loaded!')
 
         lap = 1
         while True:
