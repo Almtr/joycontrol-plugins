@@ -1,9 +1,5 @@
 import logging
 from JoycontrolPlugin import JoycontrolPlugin
-import os
-import sys
-
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 logger = logging.getLogger(__name__)
 
@@ -57,15 +53,19 @@ class SkipDays(JoycontrolPlugin):
            await self.button_push('a')
            await self.wait(0.035)
            await self.button_push('a')
-           await self.wait(0.25)
+           await self.wait(0.2)
            daysOfMonth = 0
         
          if int(daysNow / daysLimit * 100) > perCount:
            logger.info(str(int(daysNow / daysLimit * 100)) + '% (' + str(daysNow) + 'days) finished')
            perCount = int(daysNow / daysLimit * 100)
+           
+        await self.button_push('home')
+        await self.wait(1)
+        await self.button_push('a')
 
 
     async def run(self):
-        logger.info('Get Feathers Plugin loaded!')
+        logger.info('Skip Days Plugin loaded!')
         print('\nEnter the number of days you want')
         await self.skip_days()
