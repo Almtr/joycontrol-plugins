@@ -6,55 +6,34 @@ logger = logging.getLogger(__name__)
 class SkipDays(JoycontrolPlugin):
     async def skip_days(self):
 
-        daysLimitStr = input()
+        daysLimitStr = self.options[0]
         daysLimit = int(daysLimitStr)
         daysNow = 0
         daysOfMonth = 0
         perCount = 0
         
+        await self.wait(1)
         while daysNow < daysLimit:
          if daysOfMonth != 30:
-           await self.button_push('a')
-           await self.wait(0.25)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('up')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.2)
            daysNow += 1
            daysOfMonth += 1
-        
          else:
-           await self.button_push('a')
-           await self.wait(0.25)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('left')
-           await self.wait(0.035)
-           await self.button_push('up')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.035)
-           await self.button_push('a')
-           await self.wait(0.2)
            daysOfMonth = 0
+
+         await self.button_push('a')
+         await self.wait(0.5)
+         await self.button_push('left')
+         await self.wait(0.055)
+         await self.button_push('left')
+         await self.wait(0.055)
+         await self.button_push('left')
+         await self.wait(0.055)
+         await self.button_push('up')
+         await self.wait(0.055)
+         await self.button_push('right', press_time_sec = 0.55)
+         await self.wait(0.055)
+         await self.button_push('a')
+         await self.wait(0.3)
         
          if int(daysNow / daysLimit * 100) > perCount:
            logger.info(str(int(daysNow / daysLimit * 100)) + '% (' + str(daysNow) + 'days) finished')
@@ -67,5 +46,4 @@ class SkipDays(JoycontrolPlugin):
 
     async def run(self):
         logger.info('Skip Days Plugin loaded!')
-        print('\nEnter the number of days you want')
         await self.skip_days()
