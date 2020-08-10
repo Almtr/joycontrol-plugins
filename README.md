@@ -41,3 +41,4 @@ For more information, see the [wiki](https://github.com/Almtr/joycontrol-plugins
     - LoopBattleTower
     - LoopTournament
     - ReleasePokemons
+    - SkipDays (Created by [Zobio](https://github.com/Zobio))
