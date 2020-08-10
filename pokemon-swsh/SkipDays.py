@@ -12,7 +12,14 @@ class SkipDays(JoycontrolPlugin):
         daysOfMonth = 0
         perCount = 0
 
+        # Reset cursor position
+        await self.button_push('a')
+        await self.wait(0.5)
+        await self.button_push('right', press_time_sec = 0.55)
+        await self.wait(0.055)
+        await self.button_push('a')
         await self.wait(1)
+
         while daysNow < daysLimit:
             if daysOfMonth != 30:
                 daysNow += 1
