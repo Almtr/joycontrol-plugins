@@ -1,10 +1,13 @@
 import logging
-from JoycontrolPlugin import JoycontrolPlugin
+from JoycontrolPlugin import JoycontrolPlugin, JoycontrolPluginError
 
 logger = logging.getLogger(__name__)
 
 class SkipDays(JoycontrolPlugin):
     async def skip_days(self):
+
+        if self.options is None:
+            raise JoycontrolPluginError('Plugin option is not set. Please use "--plugin-options <days>".')
 
         daysLimitStr = self.options[0]
         daysLimit = int(daysLimitStr)
