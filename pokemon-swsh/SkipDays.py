@@ -11,7 +11,7 @@ class SkipDays(JoycontrolPlugin):
         daysNow = 0
         daysOfMonth = 0
         perCount = 0
-        
+
         await self.wait(1)
         while daysNow < daysLimit:
             if daysOfMonth != 30:
@@ -34,7 +34,7 @@ class SkipDays(JoycontrolPlugin):
             await self.wait(0.055)
             await self.button_push('a')
             await self.wait(0.3)
-        
+
             if int(daysNow / daysLimit * 100) > perCount:
                 logger.info(str(int(daysNow / daysLimit * 100)) + '% (' + str(daysNow) + 'days) finished')
                 perCount = int(daysNow / daysLimit * 100)
