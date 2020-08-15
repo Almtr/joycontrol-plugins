@@ -13,19 +13,19 @@ class ChangeRaidPokemon(JoycontrolPlugin):
             for _ in range(3):
                 if first:
                     await self.button_push('a')
-                    await self.wait(0.55)
+                    await self.wait(0.6)
                     await self.button_push('a')
                     await self.wait(1.8)
                     first = False
                 else:
                     await self.button_push('a')
-                    await self.wait(0.55)
+                    await self.wait(0.6)
                     await self.button_push('a')
                     await self.wait(0.3)
                     await self.button_push('a')
                     await self.wait(0.3)
                     await self.button_push('a')
-                    await self.wait(0.55)
+                    await self.wait(0.6)
                     await self.button_push('a')
                     await self.wait(1.8)
                 # Open the "Home"
@@ -80,10 +80,10 @@ class ChangeRaidPokemon(JoycontrolPlugin):
                 await self.button_push('b')
                 await self.wait(0.8)
                 await self.button_push('a')
-                await self.wait(3.7)
+                await self.wait(3.8)
                 
             await self.button_push('a')
-            await self.wait(0.55)
+            await self.wait(0.6)
             await self.button_push('a')
             await self.wait(0.4)
             await self.button_push('a')
@@ -99,7 +99,7 @@ class ChangeRaidPokemon(JoycontrolPlugin):
             await self.button_push('x')
             await self.wait(0.5)
             await self.button_push('a')
-            await self.wait(5)
+            await self.wait(4)
             # Open the "Home > System Settings"
             await self.button_push('down')
             await self.wait(0.1)
