@@ -13,42 +13,47 @@ class ChangeRaidPokemon(TimeSkipBasePlugin):
 
         lap = 0
         while True:
-            first = True
-            for _ in range(3):
-                if first:
-                    await self.button_push('a')
-                    await self.wait(0.6)
-                    await self.button_push('a')
-                    await self.wait(1.8)
-                    first = False
-                else:
-                    await self.button_push('a')
-                    await self.wait(0.6)
+            for i in range(3):
+                # Examine a den
+                await self.button_push('a')
+                await self.wait(0.6)
+
+                # Get watt
+                if i > 0:
                     await self.button_push('a')
                     await self.wait(0.3)
                     await self.button_push('a')
                     await self.wait(0.3)
                     await self.button_push('a')
                     await self.wait(0.6)
-                    await self.button_push('a')
-                    await self.wait(1.8)
+
+                await self.button_push('a')
+                await self.wait(1.8)
                 await self.change_days(1)
                 await self.wait(0.3)
+
+                # Exit
                 await self.button_push('b')
                 await self.wait(0.8)
                 await self.button_push('a')
                 await self.wait(3.8)
+
+            # Show a 4th Pokemon
             await self.button_push('a')
             await self.wait(0.6)
             await self.button_push('a')
             await self.wait(0.4)
             await self.button_push('a')
             await self.wait(0.4)    
+            
+            # Instead of alarm
             for _ in range(10):
                 await self.button_push('down')
                 await self.wait(0.1)
                 await self.button_push('up')
                 await self.wait(0.1)
+
+            # Reset game and days
             await self.wait(2)
             await self.button_push('home')
             await self.wait(1)
@@ -63,5 +68,6 @@ class ChangeRaidPokemon(TimeSkipBasePlugin):
             await self.wait(20)
             await self.button_push('a')
             await self.wait(10)        
+
             lap += 1
             logger.info(str(lap) + 'cycle finished.')
