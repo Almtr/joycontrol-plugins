@@ -63,3 +63,59 @@ class TimeSkipBasePlugin(JoycontrolPlugin):
         await self.wait(1.0)
         await self.button_push('a')
         await self.wait(0.5)
+    async def change_days(self,num):
+        # Open the "Home"
+        await self.button_push('home')
+        await self.wait(0.8)
+
+        # Open the "Home > System Settings"
+        await self.button_push('down')
+        await self.wait(0.1)
+        await self.button_push('right', press_time_sec=0.8)
+        await self.wait(0.1)
+        await self.button_push('left')
+        await self.wait(0.1)
+        await self.button_push('a')
+        await self.wait(0.8)
+
+        # Open the "Home > System Settings > System"
+        await self.button_push('down', press_time_sec=1.5)
+        await self.wait(0.3)
+        await self.button_push('a')
+        await self.wait(0.3)
+
+        # Open the "Home > System Settings > System > Date and Time"
+        await self.button_push('down', press_time_sec=0.6)
+        await self.wait(0.1)
+        await self.button_push('a')
+        await self.wait(0.5)
+
+        # Open the "Home > System Settings > System > Date and Time > Date and Time"
+        await self.button_push('down', press_time_sec=0.7)
+        await self.wait(0.1)
+        await self.button_push('a')
+        await self.wait(0.3)
+
+        # Set next day
+        await self.button_push('a')
+        await self.wait(0.1)
+        await self.button_push('a')
+        await self.wait(0.1)
+        if num >= 0 :
+            for _ in range(num) :
+                await self.button_push('up')
+                await self.wait(0.1)
+        else :
+            for _ in range(num * -1) :
+                await self.button_push('down')
+                await self.wait(0.1)
+        await self.button_push('right', press_time_sec=0.5)
+        await self.wait(0.1)
+        await self.button_push('a')
+        await self.wait(0.1)
+
+        # Reopen the game.
+        await self.button_push('home')
+        await self.wait(1.0)
+        await self.button_push('a')
+        await self.wait(0.5)
