@@ -42,9 +42,11 @@ class ChangeRaidPokemon(TimeSkipBasePlugin):
             await self.button_push('a')
             await self.wait(0.6)
             await self.button_push('a')
-            await self.wait(0.4)
+            await self.wait(0.3)
             await self.button_push('a')
-            await self.wait(0.4)    
+            await self.wait(0.3)    
+            await self.button_push('a')
+            await self.wait(0.6)    
             
             # Instead of alarm
             for _ in range(10):
