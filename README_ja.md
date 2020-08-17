@@ -37,6 +37,7 @@ $ git clone https://github.com/Almtr/joycontrol-plugins.git
         - ハネ自動回収（GetFeathers）
         - ワット自動回収（GetWatts）
         - 自動IDくじ（TryLotoID）
+        - マックスレイドバトルのポケモン切替え（ChangeRaidPokemon: Created by [Zobio](https://github.com/Zobio)）
     - マックスレイドバトル周回（AutoRaid）
     - あまいミツとふしぎなアメの合成（CombineHoneyAndCandy）
     - 自動タマゴ孵化（HatchEggs）
