@@ -35,9 +35,11 @@ For more information, see the [wiki](https://github.com/Almtr/joycontrol-plugins
         - GetFeathers
         - GetWatts
         - TryLotoID
+        - ChangeRaidPokemon (Created by [Zobio](https://github.com/Zobio))
     - AutoRaid
     - CombineHoneyAndCandy
     - HatchEggs
     - LoopBattleTower
     - LoopTournament
     - ReleasePokemons
+    - SkipDays (Created by [Zobio](https://github.com/Zobio))
