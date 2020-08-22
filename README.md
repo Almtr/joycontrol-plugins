@@ -31,12 +31,14 @@ For more information, see the [wiki](https://github.com/Almtr/joycontrol-plugins
 - Pokemon Sword and Shield Plugins
     - TimeSkipGlitch
         - BuyBargains
+        - ChangeRaidPokemon (Created by [Zobio](https://github.com/Zobio))
         - GetBerries
         - GetFeathers
         - GetWatts
         - TryLotoID
     - AutoRaid
     - CombineHoneyAndCandy
+    - DistributeRaid (Created by [Zobio](https://github.com/Zobio))
     - HatchEggs
     - LoopBattleTower
     - LoopTournament
