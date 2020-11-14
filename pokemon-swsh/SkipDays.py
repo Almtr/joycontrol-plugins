@@ -1,4 +1,6 @@
 import logging
+import asyncio
+from aioconsole import ainput
 from JoycontrolPlugin import JoycontrolPlugin, JoycontrolPluginError
 
 logger = logging.getLogger(__name__)
@@ -11,6 +13,16 @@ class SkipDays(JoycontrolPlugin):
 
         daysLimitStr = self.options[0]
         daysLimit = int(daysLimitStr)
+        
+        if daysLimit >= 10000:
+            answer = await ainput(prompt='The action you want may fail. Do you want to continue?(y/n)')
+
+            if 'n' in answer:
+                raise JoycontrolPluginError(f'{answer}')
+            elif 'y' not in answer:
+                raise JoycontrolPluginError('invalid input. Please press \'y\' or \'n\'')
+        
+        
         daysNow = 0
         daysOfMonth = 0
         perCount = 0
