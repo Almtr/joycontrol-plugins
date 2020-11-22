@@ -1,28 +1,11 @@
 import logging
-import asyncio
 from aioconsole import ainput
 from JoycontrolPlugin import JoycontrolPlugin, JoycontrolPluginError
 
 logger = logging.getLogger(__name__)
 
 class SkipDays(JoycontrolPlugin):
-    async def skip_days(self):
-
-        if self.options is None:
-            raise JoycontrolPluginError('Plugin option is not set. Please use "--plugin-options <days>".')
-
-        daysLimitStr = self.options[0]
-        daysLimit = int(daysLimitStr)
-        
-        if daysLimit >= 10000:
-            answer = await ainput(prompt='The action you want may fail. Do you want to continue?(y/n)')
-
-            if 'n' in answer:
-                raise JoycontrolPluginError(f'{answer}')
-            elif 'y' not in answer:
-                raise JoycontrolPluginError('invalid input. Please press \'y\' or \'n\'')
-        
-        
+    async def skip_days(self, daysLimit):
         daysNow = 0
         daysOfMonth = 0
         perCount = 0
@@ -68,4 +51,21 @@ class SkipDays(JoycontrolPlugin):
 
     async def run(self):
         logger.info('Skip Days Plugin loaded!')
-        await self.skip_days()
+
+        if self.options is None:
+            raise JoycontrolPluginError('Plugin option is not set. Please use "--plugin-options <days>".')
+
+        daysLimit = int(self.options[0])
+
+        if daysLimit >= 10000:
+            while True:
+                answer = await ainput(prompt='The action you want may fail. Do you want to continue?(y/n)')
+
+                if 'n' in answer.lower():
+                    return
+                elif 'y' in answer.lower():
+                    break
+                else:
+                    print('Invalid input. Please answer \'y\' or \'n\'')
+
+        await self.skip_days(daysLimit)
