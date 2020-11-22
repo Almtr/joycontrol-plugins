@@ -3,8 +3,8 @@ from JoycontrolPlugin import JoycontrolPlugin
 
 logger = logging.getLogger(__name__)
 
-class LoopAdventure(JoycontrolPlugin):
-    async def loop_adventure(self):
+class LoopEndlessAdventures(JoycontrolPlugin):
+    async def loop_endless_adventures(self):
         '''
         Commands:
           AAAAA (wait 5sec) DOWN A (wait 3sec) 
@@ -35,6 +35,6 @@ class LoopAdventure(JoycontrolPlugin):
             await self.wait(1.0)
 
     async def run(self):
-        logger.info('Loop Adventure Plugin loaded!')
-        await self.loop_adventure()
+        logger.info('Loop Endless Adventures Plugin loaded!')
+        await self.loop_endless_adventures()
         
