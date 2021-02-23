@@ -30,7 +30,7 @@ class AutoRaid(JoycontrolPlugin):
             # Select the "Fight" Button or throw a wishing piece.
             for _ in range(3):
                 await self.button_push('a')
-                await self.wait(0.5)
+                await self.wait(0.3)
                 await self.button_push('down', press_time_sec=3.0)
                 await self.button_push('up')
             
@@ -43,4 +43,4 @@ class AutoRaid(JoycontrolPlugin):
             await self.button_push('down')
             await self.wait(0.1)
             await self.button_push('down')
-            await self.wait(0.1)
+            await self.wait(0.5)
